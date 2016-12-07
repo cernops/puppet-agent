@@ -1,0 +1,36 @@
+--- selinuxswig_ruby_wrap.c	2016-12-08 10:53:22.000000000 +0100
++++ selinuxswig_ruby_wrap-new.c	2016-12-08 11:04:42.000000000 +0100
+@@ -854,10 +854,10 @@
+ #define StringValue(s) RB_STRING_VALUE(s)
+ #endif
+ #ifndef StringValuePtr
+-#define StringValuePtr(s) RSTRING(RB_STRING_VALUE(s))->ptr
++#define StringValuePtr(s) RSTRING_PTR(RB_STRING_VALUE(s))
+ #endif
+ #ifndef StringValueLen
+-#define StringValueLen(s) RSTRING(RB_STRING_VALUE(s))->len
++#define StringValueLen(s) RSTRING_LEN(RB_STRING_VALUE(s))
+ #endif
+ #ifndef SafeStringValue
+ #define SafeStringValue(v) do {\
+@@ -1286,7 +1286,7 @@
+         downcast methods. */
+       if (obj != Qnil) {
+         VALUE value = rb_iv_get(obj, "__swigtype__");
+-        char* type_name = RSTRING(value)->ptr;
++        char* type_name = RSTRING_PTR(value);
+ 				
+         if (strcmp(type->name, type_name) == 0) {
+           return obj;
+@@ -1589,9 +1589,9 @@
+     
+ 
+ 
+-    char *cstr = STR2CSTR(obj);
++    char *cstr = StringValuePtr(obj);
+     
+-    size_t size = RSTRING(obj)->len + 1;
++    size_t size = RSTRING_LEN(obj) + 1;
+     if (cptr)  {
+       if (alloc) {
+ 	if (*alloc == SWIG_NEWOBJ) {
