@@ -273,6 +273,24 @@ project "puppet-agent" do |proj|
     proj.component "ruby-selinux"
   end
 
+  # Add in CERN's gems for landb.
+  proj.component "rubygem-rack"
+  proj.component "rubygem-socksify"
+  proj.component "rubygem-mini_portile2"
+  proj.component "rubygem-pkg-config"
+  proj.component "rubygem-nokogiri"
+  proj.component "rubygem-akami"
+  proj.component "rubygem-builder"
+  proj.component "rubygem-gyoku"
+  proj.component "rubygem-httpi"
+  proj.component "rubygem-landb"
+  proj.component "rubygem-macaddr"
+  proj.component "rubygem-nori"
+  proj.component "rubygem-savon"
+  proj.component "rubygem-systemu"
+  proj.component "rubygem-uuid"
+  proj.component "rubygem-wasabi"
+
   proj.directory proj.install_root
   proj.directory proj.prefix
   proj.directory proj.sysconfdir
