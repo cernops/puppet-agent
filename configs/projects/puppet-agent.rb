@@ -290,6 +290,8 @@ project "puppet-agent" do |proj|
   proj.component "rubygem-systemu"
   proj.component "rubygem-uuid"
   proj.component "rubygem-wasabi"
+  proj.component "rubygem-sshkeyauth"
+
 
   proj.directory proj.install_root
   proj.directory proj.prefix
