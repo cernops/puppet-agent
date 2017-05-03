@@ -141,6 +141,7 @@ project "puppet-agent" do |proj|
   proj.component "rubygem-uuid"
   proj.component "rubygem-wasabi"
   proj.component "rubygem-sshkeyauth"
+  proj.component "rubygem-curb"
 
 
   proj.directory proj.install_root
