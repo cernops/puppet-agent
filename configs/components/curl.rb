@@ -4,6 +4,12 @@ component 'curl' do |pkg, settings, platform|
   pkg.url "https://curl.haxx.se/download/curl-#{pkg.get_version}.tar.gz"
 
   pkg.build_requires "openssl"
+  if platform.name =~ /^el-7-.*$/
+    pkg.build_requires "krb5"
+    gssapi='--with-gssapi'
+  else
+    gssapi='--without-gssapi'
+  end
   pkg.build_requires "puppet-ca-bundle"
 
   if platform.is_cross_compiled_linux?
@@ -28,6 +34,7 @@ component 'curl' do |pkg, settings, platform|
         --enable-threaded-resolver \
         --disable-ldap \
         --disable-ldaps \
+	#{gssapi} \
         --with-ca-bundle=#{settings[:prefix]}/ssl/cert.pem \
         #{settings[:host]}"]
   end
