@@ -1,6 +1,6 @@
 component "rubygem-builder" do |pkg, settings, platform|
-  pkg.version "3.2.2"
-  pkg.md5sum "14757f8118991be11f02e57b96cbba43"
+  pkg.version "3.2.3"
+  pkg.md5sum "24dbb8bc3a17ce24ff65c9af513f5245"
   pkg.url "https://rubygems.org/downloads/builder-#{pkg.get_version}.gem"
 
   pkg.build_requires "ruby-#{settings[:ruby_version]}"
