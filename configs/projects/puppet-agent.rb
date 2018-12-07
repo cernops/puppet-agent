@@ -142,6 +142,15 @@ project "puppet-agent" do |proj|
   proj.component "rubygem-wasabi"
   proj.component "rubygem-sshkeyauth"
 
+  # Addons for octocatalog-diff
+  proj.component "rubygem-mime-types-data"
+  proj.component "rubygem-mime-types"
+  proj.component "rubygem-multi_xml"
+  proj.component "rubygem-diffy"
+  proj.component "rubygem-hashdiff"
+  proj.component "rubygem-httparty"
+  proj.component "rubygem-rugged"
+  proj.component "rubygem-octocatalog-diff"
 
   proj.directory proj.install_root
   proj.directory proj.prefix
