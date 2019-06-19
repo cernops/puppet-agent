@@ -73,6 +73,7 @@ project "puppet-agent" do |proj|
   proj.vendor "Puppet Labs <info@puppetlabs.com>"
   proj.homepage "https://www.puppetlabs.com"
   proj.target_repo "puppet5"
+  proj.generate_source_artifacts true
 
   if platform.is_solaris?
     proj.identifier "puppetlabs.com"
