@@ -220,7 +220,7 @@ component "facter" do |pkg, settings, platform|
   end
 
   # Disable tests for platforms that use the default OS toolchain
-  unless platform.name =~ /sles-15|el-8|debian-10/ || platform.is_fedora?
+  unless platform.name =~ /sles-15|el-6|el-7|el-8|debian-10/ || platform.is_fedora?
     pkg.check do
       tests
     end
