@@ -215,7 +215,7 @@ component "facter" do |pkg, settings, platform|
   end
 
   # Disable tests for platforms that use the default OS toolchain
-  if platform.name =~ /debian-[89]|el-[567]|redhatfips-7|sles-(:?11|12)|ubuntu-(:?14.04|16.04|18.04)/ || !platform.is_linux?
+  if platform.name =~ /debian-[89]|el-[5]|redhatfips-7|sles-(:?11|12)|ubuntu-(:?14.04|16.04|18.04)/ || !platform.is_linux?
     pkg.check do
       tests
     end
