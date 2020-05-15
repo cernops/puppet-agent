@@ -94,6 +94,7 @@ project "puppet-agent" do |proj|
   proj.component "cpp-pcp-client"
   proj.component "pxp-agent"
   proj.component "libwhereami"
+  proj.component "marionette-collective"
 
   # Then the dependencies
   # Provides augeas, curl, libedit, libxml2, libxslt, openssl, puppet-ca-bundle, ruby and rubygem-*
