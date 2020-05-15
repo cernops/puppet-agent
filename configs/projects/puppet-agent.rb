@@ -114,6 +114,7 @@ project "puppet-agent" do |proj|
   proj.component "puppet"
   proj.component "facter"
   proj.component "hiera"
+  proj.component "marionette-collective"
 
   proj.component "puppet-resource_api"
 
